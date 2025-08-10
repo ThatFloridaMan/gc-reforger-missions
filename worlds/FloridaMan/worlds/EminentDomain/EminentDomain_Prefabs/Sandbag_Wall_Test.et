@@ -1,0 +1,45 @@
+GenericEntity : "{A7930B258A9B4CA8}Prefabs/Props/Military/Sandbags/Sandbag_01_wall_plastic.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SignalsManagerComponent "{661503D5D3F8410E}" {
+  }
+  SCR_ExplosiveChargeInventoryItemComponent "{661503D511C8A1DB}" {
+   Attributes SCR_ItemAttributeCollection "{661503D50A9AF36E}" {
+    ItemDisplayName UIInfo "{661503D50E3936BE}" {
+     Name "Sandbag with Wall"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{661503D4F848DF4A}" {
+     Weight 2
+     SizeSetupStrategy Manual
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{661503D4FF80C451}" {
+     AnimationAttachments {
+      AnimationAttachmentInfo "{661503D4F58CE4D7}" {
+       AnimGraph "{B43CAEC6CB16C36D}Assets/Items/Equipment/workspaces/Shovel_ETool_US.agr"
+       AnimInstance "{5956FB1DD71F9183}Assets/Items/Equipment/workspaces/Shovel_ETool_US.asi"
+       BindingName "Gadget"
+      }
+     }
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{661503D4DD1843EF}" {
+      CameraDistanceToItem 6
+      PreviewModel "{8644C452B46FBF5C}Assets/Props/Military/Sandbags/Sandbag_01_wall.xob"
+     }
+    }
+    m_Size SLOT_2x2
+    m_bRefundable 0
+   }
+  }
+  SCR_PlaceableItemComponent "{661503D572D58278}" {
+   m_bCanAttachToDynamicObject 1
+   m_bCanAttachAngled 1
+   m_eMeasurementMethod FROM_CENTER_OF_MASS
+   m_fMaxPlacementDistance 6
+   m_ePlacementType XYZ
+  }
+  ActionsManagerComponent "{661503D5859561DE}" {
+  }
+ }
+ coords 9593.408 10.875 5217.802
+}

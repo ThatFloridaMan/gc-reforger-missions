@@ -30,14 +30,11 @@ PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_Game
  }
  coords 7600.099 79.429 5495.817
 }
-GenericEntity cacheExpSpawn {
- coords 9578.216 10.875 5203.963
-}
 TILW_MissionFrameworkEntity : "{8F846D0FD5D6EA51}Prefabs/MP/TILW_MissionFramework.et" {
  coords 7601.359 79.414 5495.919
  m_missionEvents {
   TILW_MissionEvent "{660916AFB7E9BA21}" {
-   m_name "UK Victory"
+   m_name "US Victory"
    m_instructions {
     TILW_SendMessageInstruction "{660E1744C5DA3629}" {
      m_executionDelay 10
@@ -48,7 +45,7 @@ TILW_MissionFrameworkEntity : "{8F846D0FD5D6EA51}Prefabs/MP/TILW_MissionFramewor
    m_condition TILW_ConjunctionTerm "{660916AF9A635FE4}" {
     m_operands {
      TILW_LiteralTerm "{660916AF9FD3159C}" {
-      m_flagName "CacheDestroyed"
+      m_flagName "CachesDestroyed"
      }
      TILW_LiteralTerm "{660916AF957897E2}" {
       m_flagName "SeparatistKilled"
@@ -96,7 +93,7 @@ TILW_MissionFrameworkEntity : "{8F846D0FD5D6EA51}Prefabs/MP/TILW_MissionFramewor
    }
   }
   TILW_MissionEvent "{660916AC76D3F7CC}" {
-   m_name "Cache Explosion Flair"
+   m_name "Cache 1 Explosion Flair"
    m_instructions {
     TILW_SpawnPrefabInstruction "{660916AC6512746F}" {
      m_executionDelay 1
@@ -110,6 +107,7 @@ TILW_MissionFrameworkEntity : "{8F846D0FD5D6EA51}Prefabs/MP/TILW_MissionFramewor
   }
  }
  m_casualtyFlags {
+<<<<<<< Updated upstream
   TILW_FactionPlayersKilledFlag "{660E174646A91809}" {
    m_flagName "SeparatistKilled"
    m_factionKey "GC_SEPARATIST"
@@ -119,6 +117,35 @@ TILW_MissionFrameworkEntity : "{8F846D0FD5D6EA51}Prefabs/MP/TILW_MissionFramewor
    m_flagName "BritishKilled"
    m_factionKey "UK"
    m_casualtyRatio 0.9
+=======
+  TILW_FactionPlayersKilledFlag "{661503D6FB4600FF}" {
+   m_flagName "USKilled"
+   m_factionKey "RHS_USAF"
+   m_casualtyRatio 0.95
+  }
+  TILW_FactionPlayersKilledFlag "{661503D6F765C539}" {
+   m_flagName "SeparatistsKilled"
+   m_factionKey "GC_SEPARATIST"
+   m_casualtyRatio 0.95
+  }
+ }
+ m_metaFlags {
+  TILW_MetaFlag "{661503D6DCE1FAA9}" {
+   m_flagName "AllCachesDestroyed"
+   m_definition TILW_ConjunctionTerm "{661503D6D4DB8390}" {
+    m_operands {
+     TILW_LiteralTerm "{661503D6C95C46C1}" {
+      m_flagName "Cache1Destroyed"
+     }
+     TILW_LiteralTerm "{661503D6CF1F4F05}" {
+      m_flagName "Cache2Destroyed"
+     }
+     TILW_LiteralTerm "{661503D6C4DEFE38}" {
+      m_flagName "Cache3Destroyed"
+     }
+    }
+   }
+>>>>>>> Stashed changes
   }
  }
 }
